@@ -6,4 +6,5 @@ https://github.com/esp8266/Arduino
 
 # Install
 
+### For ESP8266 
 You can install through the Arduino Library Manager.
