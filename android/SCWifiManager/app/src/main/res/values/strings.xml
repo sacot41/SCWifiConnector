@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SCWifiManager</string>
+
+    <!-- Main Activity -->
+    <string name="main_activity_description">Easy configure network wifi of your ESP8266 device</string>
+    <string name="main_activity_settings_button">Settings</string>
+    <string name="main_activity_config_button">Connect to ESP</string>
+
+    <!-- Config Activity -->
+    <string name="config_activity_espssid_hint">ESP SSID</string>
+    <string name="config_activity_esppassphrase_hint">ESP PassPhrase</string>
+    <string name="config_activity_esp_ip_address_hint">ESP IP Address</string>
+    <string name="config_activity_esp_port_hint">ESP Port</string>
+    <string name="config_activity_esp_timeout">Connection Timeout</string>
+    <string name="config_activity_save">Save</string>
+    
+    <!-- Send credential -->
+    <string name="send_credential_send_button">Send</string>
+    <string name="send_credential_make_it_flash">Flash led</string>
+    <string name="send_credential_deconnect">Disconnect</string>
+
+</resources>

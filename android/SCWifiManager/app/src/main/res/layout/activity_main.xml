@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sciot_blue_light">
+
+    <View
+        android:id="@+id/view_main_activity_hack_center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_icone"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/view_main_activity_hack_center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/web_hi_res_512"/>
+
+    <ImageView
+        android:id="@+id/imageview_main_activity_github"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@id/view_main_activity_hack_center"
+        android:scaleType="fitStart"
+        android:src="@drawable/github_ribbon"/>
+
+    <com.unstoppable.submitbuttonview.SubmitButton
+        android:id="@+id/submitbutton_main_activity_connect"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:progressStyle="loading"
+        app:failedColor="@color/sciot_red"
+        app:succeedColor="@color/sciot_turquoise"
+        app:buttonColor="@color/sciot_turquoise"
+        app:buttonText="@string/main_activity_config_button"/>
+
+    <TextView
+        android:id="@+id/textview_main_activity_settings"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@id/submitbutton_main_activity_connect"
+        android:gravity="center"
+        android:textColor="@color/sciot_white"
+        android:text="@string/main_activity_settings_button"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textview_main_activity_settings"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textColor="@color/sciot_white"
+        android:textSize="18sp"
+        android:text="@string/main_activity_description"/>
+
+    <fragment
+        android:id="@+id/fragment_send_credential"
+        android:name="com.sacot41.espconnector_example.SendCredentialFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+

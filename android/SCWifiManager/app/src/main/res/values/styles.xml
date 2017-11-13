@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="ESPWifiAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- button -->
+    <style name="ESPWifiAppTheme.Button">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:background">@color/sciot_blue</item>
+    </style>
+
+    <style name="ESPWifiAppTheme.Button.Turquoise">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:background">@color/sciot_turquoise</item>
+    </style>
+
+    <style name="ESPWifiAppTheme.Button.Red">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:background">@color/sciot_red</item>
+    </style>
+
+    <style name="ESPWifiAppTheme.Button.Text">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- edit text -->
+    <style name="ESPWifiAppTheme.EditText.CardView">
+        <item name="cardElevation">0dp</item>
+        <item name="cardCornerRadius">2dp</item>
+    </style>
+
+    <style name="ESPWifiAppTheme.EditText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">#0000</item>
+        <item name="android:gravity">center</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/sciot_black</item>
+        <item name="android:textColorHint">@color/sciot_gray_dark</item>
+    </style>
+
+</resources>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fillViewport="true"
+             android:descendantFocusability="beforeDescendants"
+             android:focusableInTouchMode="true"
+             android:background="@color/sciot_blue_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+        <ImageView
+            android:id="@+id/imageview_config_activity_header"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:src="@drawable/config_icone"
+            android:tint="@color/sciot_white"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"/>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_config_activity"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageview_config_activity_header"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp">
+
+            <com.sacot41.espconnector_example.base.ESPWifiEdittextview
+                android:id="@+id/espwifiedittextview_config_activity_espssid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:roundHint="@string/config_activity_espssid_hint"/>
+
+            <com.sacot41.espconnector_example.base.ESPWifiEdittextview
+                android:id="@+id/espwifiedittextview_config_activity_esppassphrase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:roundHint="@string/config_activity_esppassphrase_hint"/>
+
+            <com.sacot41.espconnector_example.base.ESPWifiEdittextview
+                android:id="@+id/espwifiedittextview_config_activity_esppipaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:roundHint="@string/config_activity_esp_ip_address_hint"/>
+
+            <com.sacot41.espconnector_example.base.ESPWifiEdittextview
+                android:id="@+id/espwifiedittextview_config_activity_espport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:inputType="number"
+                app:roundHint="@string/config_activity_esp_port_hint"/>
+
+            <com.sacot41.espconnector_example.base.ESPWifiEdittextview
+                android:id="@+id/espwifiedittextview_config_activity_timeout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:inputType="number"
+                app:roundHint="@string/config_activity_esp_timeout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(ms)"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center|right"/>
+
+            </com.sacot41.espconnector_example.base.ESPWifiEdittextview>
+
+            <com.unstoppable.submitbuttonview.SubmitButton
+                android:id="@+id/submitbutton_config_activity_save"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                app:progressStyle="loading"
+                app:failedColor="@color/sciot_red"
+                app:succeedColor="@color/sciot_turquoise"
+                app:buttonColor="@color/sciot_turquoise"
+                app:buttonText="@string/config_activity_save"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
