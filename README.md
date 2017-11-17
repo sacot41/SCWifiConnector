@@ -25,16 +25,16 @@ You can compile and install the demo application or download it on Google play:
 
 #### setConnectorSSID(ssid, passPhrase)
 
-This is the network create by library to wait credential of target network. The default value is : SSID = "esp8226_wificonnector_network"
-PassPhrase = "wificonnector_1234"
+	This is the network create by library to wait credential of target network. The default value is : SSID 	= "esp8226_wificonnector_network"
+	PassPhrase = "wificonnector_1234"
 
 #### setHidden(isHidden)
 
-Whatever the conenctor network is hidden. Default value True.
+	Whatever the conenctor network is hidden. Default value True.
 
 #### setConnectorIpAndPort(ipBroadCast, port)
 
-The ip and port the library will waiting for UDP packet. Default is 192.168.1.1 port 4120.
+	The ip and port the library will waiting for UDP packet. Default is 192.168.1.1 port 4120.
 
 #### setTargetSSID(SSID, passPhrase)
 
