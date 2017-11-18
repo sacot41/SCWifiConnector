@@ -48,11 +48,15 @@ The time that the library attenmpt to connect to the target network. After this 
 
 #### setConnectionCallback()
 
+Called when a connection to the target network is make. You should save the credential. See example projet.
+
 #### setConnectionFailureCallback()
+
+Called when no connection is make with the target network.
 
 #### setDeviceIdenfiticationRequestCallback()
 
-
+Call when the Android application send identification request. The ESP8266 should be blink a led to physically identify itself.
 
 # Glossary
 
