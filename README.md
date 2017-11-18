@@ -9,6 +9,7 @@ https://github.com/esp8266/Arduino
 - if it timeout, the library start a network (called connector network) and wait until it receive new credential via udp packet.
 - the library support 3 type of message in upd packet : "ssid:(ssid of target network)", "pass:(passphrase of target network)" and "request:(custom value)".
 - this library doesn't save the credential; it's up to you to save it in the connection callback. See exemple.
+- this library doesn't restart connector network when the target network is lost. (future improvement)
 
 # Install
 
@@ -39,10 +40,26 @@ The ip and port the library will waiting for UDP packet. Default is 192.168.1.1 
 
 #### setTargetSSID(SSID, passPhrase)
 
+The credential to connect to the target network. See NetworkConfig struct in the example projet.
+
 #### setTimeOut(timeout)
+
+The time that the library attenmpt to connect to the target network. After this delay, the ConnectionFailureCallback will be call.
 
 #### setConnectionCallback()
 
 #### setConnectionFailureCallback()
 
 #### setDeviceIdenfiticationRequestCallback()
+
+
+
+# Glossary
+
+#### Connector network
+
+The wifi network create by the library in order to configure target network (receive target network credential)
+
+#### Target network
+
+The network on which the user want his ESP8266 connect.
