@@ -19,11 +19,19 @@
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
+#include <Schedule.h>
+
+extern "C" {
+#include "ets_sys.h"
+#include "os_type.h"
+typedef struct _ETSTIMER_ ETSTimer;
+}
 
 #include "SCWifiConnectorConfig.h"
 
 enum SCWifiConnectorMode {
   CONNECTION_MODE,
+  CONNECTION_TO_TARGET,
   TARGET_MODE,
   OFF_MODE,
 };
@@ -33,13 +41,16 @@ class SCWifiConnector {
     SCWifiConnector();
 
     void init(ConfigBuilder configuration);
-    void enableWifi();
     void resetWifi();
     void disableWifi();
     
     SCWifiConnectorMode getMode();
-
-  private:
+    
+  protected:
+    void actualise();
+    static void runLoop(SCWifiConnector* self) {
+      self->actualise();
+    }
   
     void startConnectionMode();
     void startTargetMode();
@@ -52,7 +63,8 @@ class SCWifiConnector {
     SCWifiConnectorMode _connectorMode;
 
     unsigned long _connectionStart = 0;
-    
+
+    ETSTimer* _timer;
 };
 
 #endif
